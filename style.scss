@@ -273,10 +273,129 @@ header {
     transition: 0.15s all ease-in-out;
     text-transform: uppercase;
     cursor: pointer;
+    border-radius: 2px;
 }
 
 .button:hover {
     background-color: #212a2f;
     color: white;
     transition: 0.15s all ease-in-out;
+}
+
+.our-favorites {
+    padding-top: 130px;
+}
+
+.our-favorites-title {
+    color: #212a2f;
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: center;
+}
+
+.favorites-categories {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.favorite-categories {
+    width: 1110px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #d3d4d5;
+    margin-bottom: 35px;
+}
+
+.favorite-categories a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    color: #212a2f;
+    font-weight: 400;
+}
+
+.favorite-categories li {
+    width: 160px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.favorite-categories li:hover {
+    border-bottom: 2px solid #212a2f;
+}
+
+.our-favorites-products {
+    display: flex;
+}
+
+.first-product {
+    position: relative;
+    width: 100%;
+}
+
+@mixin buttons-settings() { //.first-product .btn
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: #212a2f;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 2px;
+    width: 276px;
+    height: 48px;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.first-product .btn {
+    @include buttons-settings();
+}
+
+.sbtn {
+    @include buttons-settings();
+    top: 61%;
+    left: 50%;
+}
+
+.first-product .btn:hover, .sbtn:hover {
+    background-color: black;
+    color: white;
+    transition: 0.15s all ease-in-out;
+}
+
+.product-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.5px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #d3d4d5;
+}
+
+.product-weather {
+    width: 30px;
+    height: 30px;
+    display: flex;
+}
+
+.product-weather-title {
+    height: 21px;
+    width: 100px;
 }
