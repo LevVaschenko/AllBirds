@@ -634,7 +634,6 @@ input {
 
 .footer {
     width: 100%;
-    height: 100px;
     margin-top: 90px;
     background-color: rgb(255, 255, 255, 0.7);
     text-align: center;
@@ -644,6 +643,8 @@ input {
     color: white;
     font-family: 'Roboto', sans-serif;
     background-color: #212a2f;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .bottom-text {
@@ -657,8 +658,43 @@ input {
         color: white;
         font-size: 12px;
     }
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .and {
     padding-left: 8px;
+}
+
+.info {
+    display: flex;
+}
+
+.help, .shop, .company, .follow-the-flock {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 2px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.help-info, .shop-info, .company-info, .follow-text {
+    font-size: 12px;
+    width: 350px;
+}
+
+.other-info, .follow-text {
+    text-align: left;
+    line-height: 25px;
+    letter-spacing: 2px;
+}
+
+.help-mail:hover, .returns:hover, .faq:hover, .afterpay:hover, .men-shoes:hover, .women-shoes:hover, .mens-apparel:hover, .women-apparel:hover, .socks:hover, .gift-cards:hover, .download:hover, .our-stores:hover, .our-story:hover, .our-materials:hover, .sustainability:hover, .partnerships:hover, .product-testing:hover, .affiliates:hover, .bulk-orders:hover, .careers:hover, .press:hover, .california:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.company-info {
+    margin-bottom: 70px;
 }
