@@ -481,12 +481,12 @@ header {
     width: 100%;
 }
 
-.c-title, .c-description {
+.c-title, .c-description, .c-title1, .c-description1 {
     padding-left: 25px;
     font-family: 'Roboto', sans-serif;
 }
 
-.c-title {
+.c-title, .c-title1 {
     color: #212a2f;
     padding-top: 15px;
     padding-bottom: 10px;
@@ -496,12 +496,37 @@ header {
     letter-spacing: 0.5px;
 }
 
-.c-description {
+.c-description, .c-description1 {
     color: #212a2f;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.5px;
+}
+
+.c-first-product1, .c-second-product1, .c-third-product1 {
+    display: flex;
+    justify-content: center;
+}
+
+.col-first-product1, .col-second-product1, .col-third-product1 {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.c-title1, .c-description1 {
+    padding-left: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.c-description1 {
+    width: 790px;
+    padding-left: 320px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 .n-image {
@@ -580,7 +605,7 @@ header {
 
 .collections-products1 {
     display: flex;
-    padding-bottom: 200px;
+    padding-bottom: 10px;
 }
 
 .contact-description {
@@ -697,4 +722,11 @@ input {
 
 .company-info {
     margin-bottom: 70px;
+}
+
+#slick-slide-control00 {
+    display: none;
+    opacity: 0;
+    height: 0px !important;
+    background: none;
 }
