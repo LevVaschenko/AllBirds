@@ -261,7 +261,7 @@ header {
     background-color: rgba(0, 0, 0, 0.25);
 }
 
-.button {
+@mixin buttonSettings() {
     display: inline-block;
     margin-top: 30px;
     width: 180px;
@@ -274,6 +274,11 @@ header {
     text-transform: uppercase;
     cursor: pointer;
     border-radius: 2px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.button {
+    @include buttonSettings();
 }
 
 .button:hover {
@@ -286,14 +291,17 @@ header {
     padding-top: 130px;
 }
 
-.our-favorites-title {
-    color: #212a2f;
-    font-family: 'Roboto', sans-serif;
-    font-size: 32px;
-    font-weight: bold;
-    line-height: 42px;
+@mixin titleSettings() {
     text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
     letter-spacing: 0.5px;
+}
+
+.our-favorites-title {
+    @include titleSettings();
     display: flex;
     justify-content: center;
 }
@@ -393,9 +401,264 @@ header {
     width: 30px;
     height: 30px;
     display: flex;
+    margin-top: 5px;
+    margin-left: 15px;
 }
 
 .product-weather-title {
-    height: 21px;
-    width: 100px;
+    white-space: nowrap;    
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.asdfasdf {
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 60px;
+}
+
+.seasons-title, .nature-title, .climate-title {
+    @include titleSettings();
+    padding-bottom: 60px;
+}
+
+.seasons-description{
+    @include titleSettings();
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.seasons-buttons {
+    display: flex;
+    justify-content: center
+}
+
+.buttons {
+    @include buttonSettings();
+    height: 48px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 2px;
+    color: white;
+    background-color: #212a2f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 125px;
+}
+
+.button1 {
+    margin-right: 10px;
+}
+
+.button2 {
+    margin-left: 10px;
+}
+
+.buttons:hover {
+    background-color: white;
+    color: #212a2f;
+    transition: 0.15s all ease-in-out;
+}
+
+.collections-title {
+    @include titleSettings();
+    text-align: left;
+    padding-bottom: 30px;
+    padding-left: 25px;
+}
+
+.collections-products {
+    display: flex;
+    padding-bottom: 140px;
+}
+
+.col-first-product, .col-second-product, .col-third-product {
+    position: relative;
+    width: 100%;
+}
+
+.c-title, .c-description {
+    padding-left: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.c-title {
+    color: #212a2f;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 29px;
+    letter-spacing: 0.5px;
+}
+
+.c-description {
+    color: #212a2f;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+}
+
+.n-image {
+    width: 100%;
+    padding-bottom: 60px;
+}
+
+.nature-title {
+    padding-bottom: 25px;
+}
+
+.nature-description, .climate-description {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.nature-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.nature-button, .climate-button, .sign-up-button {
+    @include buttonSettings();
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    color: white;
+    background-color: #212a2f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 384px;
+    height: 48px;
+    margin-bottom: 125px;
+}
+
+.nature-button:hover, .climate-button:hover, .sign-up-button:hover {
+    color: #212a2f;
+    background-color: white;
+    transition: 0.15s ease-in-out;
+}
+
+.new-arrivals-title, .stories-title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    padding-bottom: 30px;
+    padding-left: 25px;
+}
+
+.c-image {
+    width: 100%;
+    padding-bottom: 60px;
+}
+
+.climate-title {
+    padding-bottom: 20px;
+}
+
+.climate-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.stories-title {
+    font-weight: 400;
+}
+
+.collections-products1 {
+    display: flex;
+    padding-bottom: 200px;
+}
+
+.contact-description {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    width: 588px;
+    height: 48px;
+    padding: 10px;
+    padding-left: 30px;
+    border: none;
+    border-bottom: 2px solid #212a2f;
+}
+
+.sign-up-button {
+    width: 111px;
+    margin: 0px;
+    margin-left: 10px;
+}
+
+.breadcrumbs {
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 20px;
+}
+
+.breadcrumb {
+    font-size: 14px;
+    color: gray;
+    text-decoration: none;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.breadcrumb:hover {
+    text-decoration-line: underline;
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+    margin-top: 90px;
+    background-color: rgb(255, 255, 255, 0.7);
+    text-align: center;
+    padding-top: 40px;
+    font-size: 21px;
+    font-weight: light;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    background-color: #212a2f;
+}
+
+.bottom-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.5px;
+    .breadcrumb {
+        padding-right: 0px;
+        color: white;
+        font-size: 12px;
+    }
+}
+
+.and {
+    padding-left: 8px;
 }
