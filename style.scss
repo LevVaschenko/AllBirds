@@ -205,30 +205,18 @@ header {
     top: -6px;
 }
 
-.cart-header:hover .product-counter{
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    font-size: 10px;
-    text-align: center;
-    line-height: 20px;
-    position: absolute;
-    color: #2c71b8;
-    cursor: pointer;
-    margin-top: 5px;
-}
-
 .product-counter {
     width: 20px;
     height: 20px;
-    border-radius: 50%;
+    border-radius: 100%;
+    background-color: black;
+    color: white;
     font-size: 10px;
     text-align: center;
     line-height: 20px;
     position: absolute;
-    top: 3px;
-    left: 13px;
-    margin-top: 5px;
+    top: -1px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .cap {
@@ -552,7 +540,7 @@ header {
     justify-content: center;
 }
 
-.nature-button, .climate-button, .sign-up-button {
+.nature-button, .climate-button, .sign-up-button, .buy-button {
     @include buttonSettings();
     font-weight: 700;
     font-size: 14px;
@@ -568,7 +556,7 @@ header {
     margin-bottom: 125px;
 }
 
-.nature-button:hover, .climate-button:hover, .sign-up-button:hover {
+.nature-button:hover, .climate-button:hover, .sign-up-button:hover, .buy-button:hover {
     color: #212a2f;
     background-color: white;
     transition: 0.15s ease-in-out;
@@ -724,9 +712,20 @@ input {
     margin-bottom: 70px;
 }
 
-#slick-slide-control00 {
+#slick-slide-control00{
     display: none;
     opacity: 0;
     height: 0px !important;
     background: none;
+}
+
+.buy-button{
+    width: 310px;
+    display: flex;
+    margin-right: 10px;
+}
+
+.buy-buttons {
+    display: flex;
+    justify-content: center;
 }
